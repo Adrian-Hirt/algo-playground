@@ -1,6 +1,8 @@
 module Algorithms
   module ArraySorting
     module Bubblesort
+      # Inplace sorting, replaces original array and
+      # returns nil
       def self.sort!(array)
         (1..array.count).reverse_each do |n|
           (0..n-2).each do |i|
@@ -9,12 +11,14 @@ module Algorithms
             end
           end
         end
-        array
+        return nil
       end
 
+      # Returns the sorted array, leaves original array untouched
       def self.sort(array)
         dup_array = array.dup
         sort!(dup_array)
+        return dup_array
       end
 
       private
@@ -23,6 +27,7 @@ module Algorithms
         temp = array[idx_a]
         array[idx_a] = array[idx_b]
         array[idx_b] = temp
+        return nil
       end
     end
   end

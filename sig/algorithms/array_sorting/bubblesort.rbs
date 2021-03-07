@@ -1,0 +1,11 @@
+module Algorithms
+  module ArraySorting
+    module Bubblesort
+      def self.sort!: [T] (Array[T]) -> nil
+      def self.sort: [T] (Array[T]) -> Array[T]
+
+      private
+      def self.swap: [T] (Array[T], T, T) -> nil
+    end
+  end
+end
